@@ -23,6 +23,7 @@ const NavBar = () => {
         <li className="nav-item">
         <Link className="nav-link" to='/Contacto'>Contacto</Link>
         </li>
+       
         
     </ul>
     </div>
