@@ -4,7 +4,7 @@ import Person from '../Person';
 const Nosotros = () => {
     return (
         <div>
-            <h1>Pagina sobre Nosotros</h1>
+            <h1></h1>
         </div>
     )
 }

@@ -1,34 +1,31 @@
-import React,{Fragment, useState} from 'react';
+import React,{ useEffect, useState} from 'react';
+import Item from '../components/Item/Item';
+import {Container,Row} from 'react-bootstrap';
 
-const Listas = () => {
+function ItemList(){
 
-    const [numeros, setNumero] = useState([1,2,3,4,5,6])
-
-    const [tiempo, setTiempo] = useState(1)
-
-    const aumentar = () => {
-        setTiempo(tiempo + 1)
-        setNumero([
-            ...numeros,
-            tiempo + 7
-        ])
-    }
+    const Item = [
+        { name: "Miami", price: 120000},
+        { name: "Cancun", price: 100000},
+        { name: "Orlando", price: 150000},
+      ]
 
     return (
-        <Fragment>
-            <ul>
-                <button onClick={aumentar}>Aumentar</button>
-                <p>Tiempo: {tiempo}</p>
-                {
-                    numeros.map((item, index) => 
-                        <li key={index}>
-                            {item} - {index}
-                        </li>
-                    )
-                }
-            </ul>
-        </Fragment>
-    );
+        <Container>
+            <Row>
+            {item && item.map((item,index)=>{
+                return <Item key={index} id={item.name} image={item.imgUrl} price={item.price}/>
+
+            })}
+
+            </Row>
+
+
+        </Container>
+
+
+    )
+
 }
- 
-export default Listas;
+
+

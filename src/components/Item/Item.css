@@ -1,0 +1,81 @@
+.Miami{
+    background-color: burlywood;
+    height: 600px;
+    width: 600px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    
+}
+
+.NewYork{
+    background-color: burlywood;
+    height: 40%;
+    width: 85%;
+    display: block;
+    margin: auto;
+    text-align: center;
+
+
+}
+
+.LA{
+    background-color: gainsboro;
+    height: 40%;
+    width: 100%;
+    display: block;
+    margin: auto;
+    text-align: center;
+
+
+}
+
+.MexicoDF{
+
+    background-color: gray;
+    height: 40%;
+    width: 85%;
+    display: block;
+    margin: auto;
+    text-align: center;
+
+
+}
+
+.Orlando{
+
+    background-color: pink;
+    height: 600px;
+    width: 600px;
+    display: block;
+    margin: auto;
+    text-align: center;
+
+    
+}
+
+.Cancun{
+    background-color: green;
+    height: 600px;
+    width: 800px;
+    display: block;
+    margin: auto;
+    text-align: center;
+
+
+
+}
+
+.LaHabana{
+    background-color: crimson;
+    height: 90%;
+    width: 90%;
+    display: block;
+    margin: auto;
+    text-align: center;
+
+}
+
+h1, p {
+    font-family: Lato;
+  }
