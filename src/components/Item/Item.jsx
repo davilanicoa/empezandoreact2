@@ -1,26 +1,30 @@
 import './Item.css'
 import React, { useContext } from 'react';
 import { CartContext } from '../CartContex2';
+import { Carrito } from '../../Carrito';
 
 
 const Item = (props) => {
     
     const [carrito,setCarrito]=useContext(CartContext);
-
+   
 
     function agregar(){
         
-        const Item = {
-            name:props.name,
-            price:props.price,
-            imagen:props.imgUrl,
-        
+        const Item = [
 
-        }
-        /*let temporal = carrito;
-        temporal.push(Item),
+            { name: "Miami", price: 120000},
+    
+            { name: "Cancun", price: 100000},
+    
+            { name: "Orlando", price: 150000},
+    
+        ]
+        
+        let temporal = carrito;
+        temporal.push(Item);
         setCarrito(temporal);
-        console.log(carrito);*/
+        console.log(carrito);
 
     }
 
@@ -32,6 +36,7 @@ const Item = (props) => {
             <h1>{props.price}</h1>
             <img src={props.imgUrl}/>
             <button onClick={agregar}>Comprame</button>
+            
         <hr />    
         </div>
         

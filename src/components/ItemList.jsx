@@ -14,7 +14,7 @@ function ItemList(){
         <Container>
             <Row>
             {item && item.map((item,index)=>{
-                return <Item key={index} id={item.name} image={item.imgUrl} price={item.price}/>
+                 return <Item key={index} id={item.name} image={item.imgUrl} price={item.price} onAdd={onAdd}/>
 
             })}
 

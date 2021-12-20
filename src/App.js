@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter,Route, Routes} from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Inicio from './components/paginas/Inicio';
@@ -8,16 +8,41 @@ import ItemListContainer from './components/container/ItemListContainer';
 import Item from './components/Item/Item';
 import { CartProvider } from './components/CartContex2';
 import { Carrito } from './Carrito';
+import RenderizadoCondicional from './components/RenderizadoCondicional';
+
 
 
 
 
 function App()  {
+  
+  /*useEffect(() => {
+    setLoading(true);
+    const db = getFirestore();
+    const itemCollection = db.collection("viajes");
+    itemCollection.get()
+    .then(querySnapshot => {
+    if(querySnapshot.size ===0){
+    console.log('No results')}
+    
+    setItems(querySnapshot.docs.map(doc => doc.data()))
+    })
+    .catch(error => console.log(error))
+    .finally(() => setLoading(false))
+  
+  }, [])*/
+  
+  
+  const [carrito, setCarrito] = useState([]);
+
+
   return (
+
+    
     <>
     
     <CartProvider>
-    <Carrito />  
+    <Carrito/>  
     <BrowserRouter>
     <NavBar/>  
     <Routes>
@@ -29,8 +54,10 @@ function App()  {
     <Item/>
     <ItemListContainer/>    
     </CartProvider>
+    <RenderizadoCondicional/>
     </>
   );
+
 }  
 
 export default App;
